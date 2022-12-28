@@ -1,0 +1,30 @@
+Single-Method Programs Design Recipe
+
+1. Describe the Problem
+
+Create a method that takes one parameter ('words' == string) and estimates the reading time returned as an interger... Assuming 
+the average is 200 words per minute.
+
+2. Design the Method Signature
+
+def reading_time(words*)        * words is a string
+    ...
+    return result*              * result should equal an interger value
+end
+
+time = reading_time("*200 words written here*")
+
+return time ==> 1 min
+
+3. Create Examples as Tests
+
+reading_time("*100 words go here*") => "Approx 30 seconds"
+
+reading_time("*200 words go here*") => "Approx 1 min"
+
+reading_time("*300 words go here*") => "Approx 1.3 min"
+
+reading_time("*400 words go here*") => "Approx 2 min"
+
+4. Implement the Behaviour
+
